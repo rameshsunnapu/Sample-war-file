@@ -17,9 +17,7 @@
       padding: 10px 20px;
       text-align: left;
     }
-    .header h1 {
-      margin: 0;
-    }
+    .header h1 { margin: 0; }
     .search-container {
       text-align: center;
       padding: 20px;
@@ -56,9 +54,7 @@
       max-width: 100%;
       height: auto;
     }
-    .product h3 {
-      text-align: center;
-    }
+    .product h3 { text-align: center; }
     .add-to-cart {
       background-color: #007bff;
       color: white;
@@ -75,14 +71,21 @@
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
+    .pipeline h2 { margin-bottom: 20px; }
     .pipeline img {
-      width: 100px;
+      width: 120px;
       margin: 0 20px;
       vertical-align: middle;
-      transition: transform 0.5s;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
     }
-    .pipeline img:hover {
-      transform: scale(1.2);
+    .pipeline img:nth-child(2) { animation-delay: 1s; }
+    .pipeline img:nth-child(3) { animation-delay: 2s; }
+    .pipeline img:nth-child(4) { animation-delay: 3s; }
+    .pipeline img:nth-child(5) { animation-delay: 4s; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     .footer {
       background-color: #333;
@@ -112,13 +115,17 @@
     </div>
   </div>
 
-  <!-- Jenkins Pipeline Section -->
+  <!-- CI/CD Pipeline Section -->
   <div class="pipeline">
-    <h2>CI/CD Pipeline</h2>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCpx0QyRqPwjb11vINYB87UCbcIOQpVz2NN80Wu4buGg&s=10" alt="Jenkins Logo">
+    <h2>CI/CD Pipeline Animation</h2>
+    <!-- GitHub -->
     <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Tomcat-logo.svg" alt="Tomcat Logo">
-    <img src="https://jenkins.io/images/logos/jenkins/jenkins.png" alt="Jenkins Pipeline">
+    <!-- Jenkins logos -->
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCpx0QyRqPwjb11vINYB87UCbcIOQpVz2NN80Wu4buGg&s=10" alt="Jenkins Logo 1">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9M5MV2hWiIHOPn0xR7SPhfFyEOAyLWCnCYn9UxK7bGQ&s=10" alt="Jenkins Logo 2">
+    <img src="https://miro.medium.com/0*7iKZS4Mi0nSboFRY.png" alt="Jenkins Pipeline">
+    <!-- Tomcat -->
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtHOq_7OJJ7LVrm1YQIwZiN3Q0xGzJ_607hwodXhZ1tpJa-65Bh4J5wkk&s=10" alt="Tomcat Logo">
     <p>Automated build and deployment of WAR into Tomcat server using Jenkins pipeline.</p>
   </div>
 
