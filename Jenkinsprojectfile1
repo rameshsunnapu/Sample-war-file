@@ -16,7 +16,7 @@ pipeline {
         stage("Build") {
             steps {
                  sh "mvn clean package"
-                 sh "mv target/hello-1.0.war target/sample-app-v1.war"
+                 sh "mv target/hello-9.5.4.war target/sample-app-v1.war"
             }
         }
         stage("Deploy to Dev") {
