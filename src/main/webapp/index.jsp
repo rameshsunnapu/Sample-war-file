@@ -2,137 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rajinikanth-BlickIT</title>
+  <title>War Development Pipeline</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-    .header {
-      background-color: #333;
-      color: #fff;
-      padding: 10px 20px;
-      text-align: left;
-    }
-    .header h1 { margin: 0; }
-    .search-container {
       text-align: center;
-      padding: 20px;
+      background-color: #111; /* Dark background for contrast */
+      color: #fff;
     }
-    .search-container input[type="text"] {
-      width: 50%;
-      padding: 10px;
-      margin-right: 10px;
-      border: none;
-      border-radius: 5px;
-    }
-    .search-container input[type="submit"] {
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      background-color: #5cb85c;
-      color: white;
-      cursor: pointer;
-    }
-    .products {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      padding: 20px;
-    }
-    .product {
-      border: 1px solid #ddd;
-      margin-bottom: 20px;
-      padding: 10px;
-      width: 30%;
-      background-color: #fff;
-    }
-    .product img {
-      max-width: 100%;
-      height: auto;
-    }
-    .product h3 { text-align: center; }
-    .add-to-cart {
-      background-color: #007bff;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 10px;
+    h1 {
+      margin-top: 20px;
+      color: #fff;
     }
     .pipeline {
-      text-align: center;
-      padding: 30px;
-      background-color: #fff;
-      margin: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
     }
-    .pipeline h2 { margin-bottom: 20px; }
-    .pipeline img {
-      width: 120px;
+    .stage {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       margin: 0 20px;
-      vertical-align: middle;
-      opacity: 0;
-      animation: fadeIn 1s forwards;
     }
-    .pipeline img:nth-child(2) { animation-delay: 1s; }
-    .pipeline img:nth-child(3) { animation-delay: 2s; }
-    .pipeline img:nth-child(4) { animation-delay: 3s; }
-    .pipeline img:nth-child(5) { animation-delay: 4s; }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .stage img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
     }
-    .footer {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 10px 20px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+    .label {
+      font-size: 16px;
+      color: #00ffcc;
+      margin-top: 5px;
+    }
+    .arrow {
+      font-size: 40px;
+      background: linear-gradient(90deg, #ff00cc, #00ffcc, #0078D7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+      animation: gradientFlow 2s infinite linear;
+    }
+    /* Staggered delays for sequential gradient animation */
+    .arrow:nth-of-type(1) { animation-delay: 0s; }
+    .arrow:nth-of-type(2) { animation-delay: 0.5s; }
+    .arrow:nth-of-type(3) { animation-delay: 1s; }
+
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
   </style>
 </head>
 <body>
-  <div class="header">
-    <h1>Rajinikanth-BlickIT</h1>
-  </div>
-  <div class="search-container">
-    <input type="text" placeholder="Search for products...">
-    <input type="submit" value="Search">
-  </div>
-  <div class="products">
-    <div class="product">
-      <img src="https://via.placeholder.com/150" alt="Fruit">
-      <h3>Fruits</h3>
-      <p>List of fruits...</p>
-      <a href="#" class="add-to-cart">Add to Cart</a>
-    </div>
-  </div>
-
-  <!-- CI/CD Pipeline Section -->
+  <h1>War Development Pipeline</h1>
   <div class="pipeline">
-    <h2>CI/CD Pipeline Animation</h2>
-    <!-- GitHub -->
-    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo">
-    <!-- Jenkins logos -->
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCpx0QyRqPwjb11vINYB87UCbcIOQpVz2NN80Wu4buGg&s=10" alt="Jenkins Logo 1">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9M5MV2hWiIHOPn0xR7SPhfFyEOAyLWCnCYn9UxK7bGQ&s=10" alt="Jenkins Logo 2">
-    <img src="https://miro.medium.com/0*7iKZS4Mi0nSboFRY.png" alt="Jenkins Pipeline">
-    <!-- Tomcat -->
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtHOq_7OJJ7LVrm1YQIwZiN3Q0xGzJ_607hwodXhZ1tpJa-65Bh4J5wkk&s=10" alt="Tomcat Logo">
-    <p>Automated build and deployment of WAR into Tomcat server using Jenkins pipeline.</p>
-  </div>
+    <!-- GitHub Stage -->
+    <div class="stage">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqax7CcfA_pyvbMaCO5aZsMMBxIDCE_VvQcuMkX2Ld7g&s=10" alt="GitHub">
+      <div class="label">Source Control</div>
+    </div>
+    <span class="arrow">➡️</span>
 
-  <div class="footer">
-    <p>Pay with Paytm using the number: [Your-Paytm-Number]</p>
-    <p>Or scan the QR code:</p>
-    <img src="https://via.placeholder.com/100" alt="Paytm QR Code">
+    <!-- Jenkins Stage -->
+    <div class="stage">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeKtJHtn7-vI6FynS_CcPJidQ_ULgGF2lekj2nx9c1OA&s=10" alt="Jenkins">
+      <div class="label">Build</div>
+    </div>
+    <span class="arrow">➡️</span>
+
+    <!-- Tomcat Stage -->
+    <div class="stage">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9M5MV2hWiIHOPn0xR7SPhfFyEOAyLWCnCYn9UxK7bGQ&s=10" alt="Tomcat">
+      <div class="label">Deploy</div>
+    </div>
+    <span class="arrow">➡️</span>
+
+    <!-- Jenkins Automation Stage -->
+    <div class="stage">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeKtJHtn7-vI6FynS_CcPJidQ_ULgGF2lekj2nx9c1OA&s=10" alt="Jenkins Automation">
+      <div class="label">Automation</div>
+    </div>
   </div>
 </body>
 </html>
