@@ -131,8 +131,4 @@
 
   <div class="footer">
     <p>Pay with Paytm using the number: [Your-Paytm-Number]</p>
-    <p>Or scan the QR code:</p>
-    <img src="https://via.placeholder.com/100" alt="Paytm QR Code">
-  </div>
-</body>
-</html>
+    <p>Or scan the QR code:<</html>
