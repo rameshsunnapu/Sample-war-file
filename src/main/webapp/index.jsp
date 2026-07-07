@@ -57,7 +57,7 @@
   </style>
 </head>
 <body>
-  <h1>War Development Pipeline</h1>
+  <h1>War Development Pipeline QA env Tomcat</h1>
   <div class="pipeline">
     <!-- GitHub Stage -->
     <div class="stage">
