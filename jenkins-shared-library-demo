@@ -1,0 +1,13 @@
+@Library('rameshsunnapuSharedLibrary') _
+pipeline {
+    agent any
+
+    stages {
+        stage('Start') {
+            steps {
+                echo "Pipeline started!"
+                PrintMessage "Hello from Jenkins! Shared Library"
+            }
+        }
+    }
+}
