@@ -38,9 +38,9 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
+                <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
-                <version>3.10.0.2594</version>
+                <version>5.7.0.6970</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
